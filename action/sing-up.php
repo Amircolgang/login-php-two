@@ -12,6 +12,10 @@ if(isset($_POST["signup"])){
     $query = "INSERT INTO users SET username=? , password=? , mobile=? , eamil=?";
 
     // stmt 
-    $stmt = 
+    $stmt = $conn->prepare();
+
+    // bind
+    $stmt->bindValue(1, )
+
 
 };

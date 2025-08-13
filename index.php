@@ -18,7 +18,7 @@
   <div class="container" id="container">
     <div class="form-container sign-up">
       <!-- // sign-up -->
-      <form method="POST">
+      <form method="POST" action="./action/sing-up.php">
         <h1>Create Account</h1>
         <div class="social-icons">
           <a href="#" class="icons"><i class="fa-brands fa-google-plus-g"></i></a>

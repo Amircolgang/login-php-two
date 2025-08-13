@@ -18,7 +18,7 @@
   <div class="container" id="container">
     <div class="form-container sign-up">
       <!-- // sign-up -->
-      <form>
+      <form method="POST">
         <h1>Create Account</h1>
         <div class="social-icons">
           <a href="#" class="icons"><i class="fa-brands fa-google-plus-g"></i></a>
@@ -31,7 +31,7 @@
         <input type="email" placeholder="Email">
         <input type="text" placeholder="MObileNumber">
         <input type="password" placeholder="Password">
-        <button>Sign Up</button>
+        <button name="signup" type="submit">Sign Up</button>
       </form>
     </div>
     <div class="form-container sign-in">

@@ -9,6 +9,9 @@ if(isset($_POST["signup"])){
         $mobile = $_POST["mobile"] ;
 
     // set 
-    $query = "INSERT INTO users SET username=? , password=? , mobile=? , eamil=?"
+    $query = "INSERT INTO users SET username=? , password=? , mobile=? , eamil=?";
+
+    // stmt 
+    $stmt = 
 
 };

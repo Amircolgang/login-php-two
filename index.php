@@ -1,6 +1,6 @@
 <?php
 require_once("config/loader.php");
-// echo "Sartgfddflam" ;
+echo "" ;
 ?>
 
 

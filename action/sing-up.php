@@ -3,8 +3,8 @@
 require_once("../config/loader.php");
 
 if(isset($_POST["signup"])){
-     
-        $username = $_POST["username"];
+    try {
+            $username = $_POST["username"];
         $email = $_POST["email"] ;
         $password = $_POST["password"];
         $mobile = $_POST["mobile"] ;
@@ -13,7 +13,7 @@ if(isset($_POST["signup"])){
     $query = "INSERT INTO users SET username=? , password=? , mobile=? , eamil=?";
 
     // stmt 
-    $stmt = $conn->prepare();
+    $stmt = $conn->prepare($query);
 
     // bind
     $stmt->bindValue(1, $username);
@@ -25,5 +25,9 @@ if(isset($_POST["signup"])){
     $stmt->execute();
 
     echo "Created"
+    } catch (\Throwable $th) {
+      
+    }
+   
 
 };

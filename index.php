@@ -17,6 +17,7 @@
 <body>
   <div class="container" id="container">
     <div class="form-container sign-up">
+      <!-- // sign-up -->
       <form>
         <h1>Create Account</h1>
         <div class="social-icons">

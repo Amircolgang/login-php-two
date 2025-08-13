@@ -1,10 +1,11 @@
 <?php
-  require_once("config/loader.php");
-  echo "sss"
+require_once("config/loader.php");
+echo "sss"
 ?>
 
 
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,25 +28,25 @@
           <a href="#" class="icons"><i class="fa-brands fa-linkedin-in"></i></a>
         </div>
         <span>or use your email to registration</span>
-        <input type="text" name="username"  placeholder="userName">
-        <input type="email"  name="email" placeholder="Email">
-        <input type="text"  name="text" placeholder="MObileNumber">
-        <input type="password"  name="password" placeholder="Password">
+        <input type="text" name="username" placeholder="userName">
+        <input type="email" name="email" placeholder="Email">
+        <input type="text" name="mobile" placeholder="MObileNumber">
+        <input type="password" name="password" placeholder="Password">
         <button name="signup" type="submit">Sign Up</button>
       </form>
     </div>
     <div class="form-container sign-in">
       <form>
         <h1>Sign In</h1>
- <br>
-            <span>or use your email/password</span>
-            <input type="text" placeholder="Mobile / Username / Password">
-            <input type="password" placeholder="Password">
-            <a href="#">Forget your Password?</a>
-            <div style="display: inline;">
-                <button>Sign In</button>
-                <a style="margin-left: 15px" href="otp.php">Send OTP</a>        
-            </div>
+        <br>
+        <span>or use your email/password</span>
+        <input type="text" placeholder="Mobile / Username / Password">
+        <input type="password" placeholder="Password">
+        <a href="#">Forget your Password?</a>
+        <div style="display: inline;">
+          <button>Sign In</button>
+          <a style="margin-left: 15px" href="otp.php">Send OTP</a>
+        </div>
       </form>
     </div>
     <div class="toggle-container">
@@ -65,4 +66,5 @@
   </div>
 </body>
 <script src="./assets/script/js/script.js"></script>
+
 </html>

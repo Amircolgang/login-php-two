@@ -24,9 +24,9 @@ if(isset($_POST["signup"])){
     // exe
     $stmt->execute();
 
-    echo "Created"
-    } catch (\Throwable $th) {
-      
+    echo "Created";
+    } catch (PDOException $e) {
+      echo ""
     }
    
 

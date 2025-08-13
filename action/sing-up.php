@@ -31,7 +31,7 @@ if(isset($_POST["signup"])){
         $stmt->execute();
 
         echo "حساب کاربری با موفقیت ایجاد شد";
-        header("location: ../index.php")
+        header("location: ../index.php");
     } catch (PDOException $e) {
         echo "خطا در ثبت نام: " . $e->getMessage();
     } catch (Exception $e) {

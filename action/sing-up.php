@@ -1,33 +1,41 @@
 <?php
-
 require_once("../config/loader.php");
 
 if(isset($_POST["signup"])){
     try {
-            $username = $_POST["username"];
-        $email = $_POST["email"] ;
-        $password = $_POST["password"];
-        $mobile = $_POST["mobile"] ;
+        // دریافت داده‌های فرم
+        $username = $_POST["username"];
+        $email = $_POST["email"];
+        $password = password_hash($_POST["password"], PASSWORD_DEFAULT); // هش کردن رمز عبور
+        $mobile = $_POST["mobile"];
+        
+        // بررسی مقادیر ضروری
+        if(empty($username) || empty($email) || empty($_POST["password"]) || empty($mobile)) {
+            throw new Exception("تمام فیلدها باید پر شوند");
+        }
+        
+        // بررسی فرمت ایمیل
+        if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            throw new Exception("فرمت ایمیل نامعتبر است");
+        }
 
-    // set 
-    $query = "INSERT INTO users SET username=? , password=? , mobile=? , eamil=?";
+        // آماده‌سازی کوئری
+        $query = "INSERT INTO users SET username=?, password=?, mobile=?, email=?";
+        
+        // اجرای کوئری
+        $stmt = $conn->prepare($query);
+        $stmt->bindValue(1, $username);
+        $stmt->bindValue(2, $password);
+        $stmt->bindValue(3, $mobile);
+        $stmt->bindValue(4, $email);
+        $stmt->execute();
 
-    // stmt 
-    $stmt = $conn->prepare($query);
-
-    // bind
-    $stmt->bindValue(1, $username);
-    $stmt->bindValue(2, $password);
-    $stmt->bindValue(3, $mobile);
-    $stmt->bindValue(4, $email);
-
-    // exe
-    $stmt->execute();
-
-    echo "Created";
-    } catch (PDO $e) {
-      echo "Your erro".$e;
+        echo "حساب کاربری با موفقیت ایجاد شد";
+        
+    } catch (PDOException $e) {
+        echo "خطا در ثبت نام: " . $e->getMessage();
+    } catch (Exception $e) {
+        echo $e->getMessage();
     }
-   
-
-};
+}
+?>

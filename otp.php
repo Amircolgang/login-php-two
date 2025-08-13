@@ -29,6 +29,7 @@
         <a href="#">Forget your Password?</a>
         <div style="display: inline;">
             <button>Send To MObile</button>
+            
             <a style="margin-left: 15px" href="otp.php">To Email</a>        
         </div>
       </form>

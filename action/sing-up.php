@@ -26,7 +26,7 @@ if(isset($_POST["signup"])){
 
     echo "Created";
     } catch (PDOException $e) {
-      echo ""
+      echo "Your erro".$e;
     }
    
 

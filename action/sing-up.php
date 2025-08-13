@@ -6,6 +6,9 @@ if(isset($_POST["signup"])){
         $username = $_POST["username"];
         $email = $_POST["email"] ;
         $password = $_POST["password"];
-        $mobile = $_POST["mobile"]
+        $mobile = $_POST["mobile"] ;
+
+    // set 
+    $query = "INSERT INTO users SET userna"
 
 };

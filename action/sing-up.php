@@ -15,7 +15,10 @@ if(isset($_POST["signup"])){
     $stmt = $conn->prepare();
 
     // bind
-    $stmt->bindValue(1, )
+    $stmt->bindValue(1, $username);
+    $stmt->bindValue(2, $password);
+    $stmt->bindValue(3, $mobile);
+    $stmt->bindValue(4, $email);
 
 
 };

@@ -4,7 +4,7 @@ require_once("../config/loader.php");
 if(isset($_POST["signin"])){
     try {
         // دریافت داده‌های فرم
-        $email = $_POST["email"];
+        $key = $_POST["key"];
         $password = password_hash($_POST["password"], PASSWORD_DEFAULT); // هش کردن رمز عبور
        
         
@@ -19,7 +19,7 @@ if(isset($_POST["signin"])){
         }
 
         // آماده‌سازی کوئری
-        $query = "INSERT INTO users SET username=?, password=?, mobile=?, email=?";
+        $query = "SELECT ";
         
         // اجرای کوئری
         $stmt = $conn->prepare($query);

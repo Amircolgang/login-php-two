@@ -9,10 +9,7 @@ if(isset($_POST["signin"])){
        
         
         // بررسی مقادیر ضروری
-        if(empty($username) || empty($email) || empty($_POST["password"]) || empty($mobile)) {
-            throw new Exception("تمام فیلدها باید پر شوند");
-        }
-        
+      
         // بررسی فرمت ایمیل
         if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             throw new Exception("فرمت ایمیل نامعتبر است");
@@ -29,7 +26,7 @@ if(isset($_POST["signin"])){
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
         
 
-        var_dump($result)
+        var_dump($result);
         // header("location: ../index.php");
     } catch (PDOException $e) {
         echo "خطا در ثبت نام: " . $e->getMessage();

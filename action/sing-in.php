@@ -17,7 +17,7 @@ if (isset($_POST["signin"])) {
         if($hasUser){
             echo "Ok" ;
         }else{
-            echo "No" ;
+            header("location: ../index.php?notuser=ok")
         };
 
     } catch (PDOException $e) {

@@ -5,8 +5,9 @@ if (isset($_POST["signin"])) {
         $key = $_POST["key"];
         $password = $_POST["password"];
 
-        $query = "SELECT * FROM users WHERE username = :key OR mobile = :key OR email = :key";
+        $query = "SELECT * FROM users WHERE (username = :key OR mobile = :key OR email = :key) and (password :password)";
         $stmt = $conn->prepare($query);
+        $stmt->bindValue(":key", $key);
         $stmt->bindValue(":key", $key);
         $stmt->execute();
         $user = $stmt->fetch(PDO::FETCH_ASSOC);

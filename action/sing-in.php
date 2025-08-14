@@ -1,7 +1,7 @@
 <?php
 require_once("../config/loader.php");
 
-if(isset($_POST["signup"])){
+if(isset($_POST["signin"])){
     try {
         // دریافت داده‌های فرم
         $username = $_POST["username"];

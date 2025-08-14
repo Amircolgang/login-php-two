@@ -1,6 +1,5 @@
 <?php
 require_once("config/loader.php");
-echo "Salam Khobi In Afzone Az Shirazi Co Montasher Shode Baraye Hemayat Roye Doke Donate Click Konid" ;
 ?>
 
 

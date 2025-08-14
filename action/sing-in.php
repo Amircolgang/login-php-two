@@ -8,13 +8,8 @@ if(isset($_POST["signin"])){
         $password =$_POST["password"]; // هش کردن رمز عبور
        
         
-        // بررسی مقادیر ضروری
       
-        // بررسی فرمت ایمیل
-        if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            throw new Exception("فرمت ایمیل نامعتبر است");
-        }
-
+    
         // آماده‌سازی کوئری
         $query = "SELECT users WHERE (username = :key OR mobile = :key OR email = :key ) AND (password = :password)";
         

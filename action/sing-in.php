@@ -4,10 +4,9 @@ require_once("../config/loader.php");
 if(isset($_POST["signin"])){
     try {
         // دریافت داده‌های فرم
-        $username = $_POST["username"];
         $email = $_POST["email"];
         $password = password_hash($_POST["password"], PASSWORD_DEFAULT); // هش کردن رمز عبور
-        $mobile = $_POST["mobile"];
+       
         
         // بررسی مقادیر ضروری
         if(empty($username) || empty($email) || empty($_POST["password"]) || empty($mobile)) {

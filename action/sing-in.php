@@ -1,32 +1,26 @@
 <?php
 require_once("../config/loader.php");
-
-if(isset($_POST["signin"])){
+if (isset($_POST["signin"])) {
     try {
-        // دریافت داده‌های فرم
         $key = $_POST["key"];
-        $password =$_POST["password"]; // هش کردن رمز عبور
-       
-        
-      
-    
-        // آماده‌سازی کوئری
-        $query = "SELECT users WHERE (username = :key OR mobile = :key OR email = :key ) AND (password = :password)";
-        
-        // اجرای کوئری
+        $password = $_POST["password"];
+
+        $query = "SELECT * FROM users WHERE username = :key OR mobile = :key OR email = :key";
         $stmt = $conn->prepare($query);
         $stmt->bindValue(":key", $key);
-        $stmt->bindValue(":password", $password);
         $stmt->execute();
-        $result = $stmt->fetch(PDO::FETCH_ASSOC);
-        
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        var_dump($result);
-        // header("location: ../index.php");
+        var_dump($user)
+        // if ($user && password_verify($password, $user["password"])) {
+        //     echo "Login successful!";
+        //     // header("Location: ../index.php");
+        // } else {
+        //     echo "Invalid credentials.";
+        // }
     } catch (PDOException $e) {
-        echo "خطا در ثبت نام: " . $e->getMessage();
-    } catch (Exception $e) {
-        echo $e->getMessage();
+        echo "Database error: " . $e->getMessage();
     }
 }
+
 ?>

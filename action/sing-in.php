@@ -19,11 +19,11 @@ if(isset($_POST["signin"])){
         }
 
         // آماده‌سازی کوئری
-        $query = "SELECT users WHERE (username = ? OR mobile = ? OR email = ? ) AND (password = ?)";
+        $query = "SELECT users WHERE (username = :key OR mobile = :key OR email = :key ) AND (password = :password)";
         
         // اجرای کوئری
         $stmt = $conn->prepare($query);
-        $stmt->bindValue(1, $username);
+        $stmt->bindValue(":key", $username);
         $stmt->bindValue(2, $password);
         $stmt->bindValue(3, $mobile);
         $stmt->bindValue(4, $email);

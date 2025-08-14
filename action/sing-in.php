@@ -5,7 +5,7 @@ if(isset($_POST["signin"])){
     try {
         // دریافت داده‌های فرم
         $key = $_POST["key"];
-        $password = password_hash($_POST["password"], PASSWORD_DEFAULT); // هش کردن رمز عبور
+        $password =$_POST["password"]; // هش کردن رمز عبور
        
         
         // بررسی مقادیر ضروری

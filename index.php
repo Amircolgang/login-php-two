@@ -47,6 +47,8 @@ require_once("config/loader.php");
           <button type="submit" name="signin">Sign In</button>
           <a style="margin-left: 15px" href="otp.php">Send OTP</a>
         </div>
+        <?php if(isset($_GET["notuser"])) {?>
+          <??>
       </form>
       <!-- login  -->
     </div>

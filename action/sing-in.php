@@ -19,7 +19,7 @@ if(isset($_POST["signin"])){
         }
 
         // آماده‌سازی کوئری
-        $query = "SELECT ";
+        $query = "SELECT users WHERE (username = ? OR mobile = ? OR email = ? ) AND ()";
         
         // اجرای کوئری
         $stmt = $conn->prepare($query);

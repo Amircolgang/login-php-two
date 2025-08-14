@@ -36,7 +36,7 @@ require_once("config/loader.php");
     </div>
     <div class="form-container sign-in">
       <!-- login  -->
-      <form method="POSt">
+      <form method="POST" action="./action/sing-up.php">
         <h1>Sign In</h1>
         <br>
         <span>or use your email/password</span>

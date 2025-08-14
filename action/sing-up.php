@@ -6,7 +6,7 @@ if(isset($_POST["signup"])){
         // دریافت داده‌های فرم
         $username = $_POST["username"];
         $email = $_POST["email"];
-        $password = password_hash($_POST["password"], PASSWORD_DEFAULT); // هش کردن رمز عبور
+        $password = password_hash$_POST["password"]); // هش کردن رمز عبور
         $mobile = $_POST["mobile"];
         
         // بررسی مقادیر ضروری

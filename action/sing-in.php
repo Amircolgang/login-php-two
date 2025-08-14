@@ -13,8 +13,12 @@ if (isset($_POST["signin"])) {
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
         var_dump($user);
-        $hasUser = $smt
-        if($)
+        $hasUser = $stmt->rowCount();
+        if($hasUser){
+            echo "Ok" ;
+        }else{
+            echo "No" ;
+        };
 
     } catch (PDOException $e) {
         echo "Database error: " . $e->getMessage();

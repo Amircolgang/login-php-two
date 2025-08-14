@@ -23,10 +23,8 @@ if(isset($_POST["signin"])){
         
         // اجرای کوئری
         $stmt = $conn->prepare($query);
-        $stmt->bindValue(":key", $username);
-        $stmt->bindValue(2, $password);
-        $stmt->bindValue(3, $mobile);
-        $stmt->bindValue(4, $email);
+        $stmt->bindValue(":key", $key);
+        $stmt->bindValue(":password", $password);
         $stmt->execute();
 
         echo "حساب کاربری با موفقیت ایجاد شد";

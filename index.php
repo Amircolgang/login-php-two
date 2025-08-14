@@ -49,8 +49,8 @@ require_once("config/loader.php");
         </div>
         <?php if(isset($_GET["notuser"])) {?>
             <p> User Not Find</p>
-          <?php }else if(isset()){?>
-
+          <?php }else if(isset($_GET["login"])){?>
+              <p>Login User</p>
           <?php }?>
       </form>
       <!-- login  -->

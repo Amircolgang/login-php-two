@@ -16,6 +16,7 @@ if (isset($_POST["signin"])) {
         $hasUser = $stmt->rowCount();
         if($hasUser){
             echo "Ok" ;
+            header("location: ../index.php?login=ok");
         }else{
             header("location: ../index.php?notuser=ok");
         };

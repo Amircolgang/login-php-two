@@ -35,7 +35,8 @@ require_once("config/loader.php");
       </form>
     </div>
     <div class="form-container sign-in">
-      <form>
+      <!-- login  -->
+      <form method="POSt">
         <h1>Sign In</h1>
         <br>
         <span>or use your email/password</span>
@@ -47,6 +48,7 @@ require_once("config/loader.php");
           <a style="margin-left: 15px" href="otp.php">Send OTP</a>
         </div>
       </form>
+      <!-- login  -->
     </div>
     <div class="toggle-container">
       <div class="toggle">

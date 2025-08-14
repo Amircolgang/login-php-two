@@ -27,8 +27,10 @@ if(isset($_POST["signin"])){
         $stmt->bindValue(":password", $password);
         $stmt->execute();
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
-        echo "حساب کاربری با موفقیت ایجاد شد";
-        header("location: ../index.php");
+        
+
+        var_dump($result)
+        // header("location: ../index.php");
     } catch (PDOException $e) {
         echo "خطا در ثبت نام: " . $e->getMessage();
     } catch (Exception $e) {

@@ -11,7 +11,7 @@ if (isset($_POST["signin"])) {
         $stmt->execute();
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        var_dump($user)
+        var_dump($user);
         // if ($user && password_verify($password, $user["password"])) {
         //     echo "Login successful!";
         //     // header("Location: ../index.php");

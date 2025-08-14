@@ -48,7 +48,8 @@ require_once("config/loader.php");
           <a style="margin-left: 15px" href="otp.php">Send OTP</a>
         </div>
         <?php if(isset($_GET["notuser"])) {?>
-          <??>
+            <p> User Not Find</p>
+          <?php }?>
       </form>
       <!-- login  -->
     </div>
